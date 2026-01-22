@@ -28,7 +28,7 @@ public class LemonadeStand {
         points2.add( new Point( 850, 705) );
         points2.add( new Point( 865, 695) );
         points2.add( new Point( 850, 645) );
-        points2.add( new Point( 855, 642) );
+        points2.add( new Point( 860, 630) );
         points2.add( new Point( 820, 630) );
         ArrayList<Point> points3 = new ArrayList<>();
         points3.add( new Point( 829.8, 650) );
@@ -39,9 +39,10 @@ public class LemonadeStand {
         points3.add( new Point( 851, 650) );
         
         // Pass Point List to Polygon constructor
-        Polygon p1 = new Polygon(points);
-        Polygon p2 = new Polygon(points2);
-        Polygon p3 = new Polygon(points3);
+        
+        Polygon p1 = new Polygon(points); //top of table
+        Polygon p2 = new Polygon(points2); //pitcher
+        Polygon p3 = new Polygon(points3); //lemonade in pitcher
         p3.setFillColor(255,255,0);
         for (int i = 5; i < 14; i++){
 			Rectangle ri = new Rectangle(((i-5)*40 + 770), 520, 40, 60);
@@ -65,5 +66,9 @@ public class LemonadeStand {
 				ln.setStrokeColor(255,255,224);
 			}
 		}
+		Path cup = new Path();//must have doubles
+		cup.moveTo(1020.0, 680.0);
+		cup.lineTo(1025.0, 705.0);
+		cup.quadTo(1030.0, 710.0, 1035, 705);
     }
 }
