@@ -66,9 +66,23 @@ public class LemonadeStand {
 				ln.setStrokeColor(255,255,224);
 			}
 		}
+		//cups made to look stacked on each other
 		Path cup = new Path();//must have doubles
 		cup.moveTo(1020.0, 680.0);
 		cup.lineTo(1025.0, 705.0);
 		cup.quadTo(1030.0, 710.0, 1035, 705);
+		cup.lineTo(1040.0, 680.0);
+		cup.quadTo(1030.0, 685.0, 1020.0, 680.0);
+		Path cup2 = new Path();
+		cup2.moveTo(1022.0, 682.0);
+		cup2.lineTo(1020.0, 670.0);
+		cup2.quadTo(1030.0, 675.0, 1040.0, 670.0);
+		cup2.lineTo(1038.0, 682.0);
+		Path cup3 = new Path();
+		cup3.moveTo(1022.0, 672.0);
+		cup3.lineTo(1020.0, 660.0);
+		cup3.quadTo(1030.0, 665.0, 1040.0, 660.0);
+		cup3.lineTo(1038.0, 672.0);
+		Oval ocup = new Oval(1020.0, 660.0, 20.0, 2.0);
     }
 }
